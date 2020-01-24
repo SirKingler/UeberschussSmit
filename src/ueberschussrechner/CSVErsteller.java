@@ -8,20 +8,21 @@ public class CSVErsteller
 {
    public void csversteller()
    {
+       String pathrel = System.getProperty("user.dir");
        try 
        {
            
-           PrintWriter pw = new PrintWriter (new File ("C:\\Users\\Linus\\Desktop\\JavaProjekte-LinusKlemd\\test.csv"));
+           PrintWriter pw = new PrintWriter (new File (pathrel+"\\Speicher.csv"));
            StringBuilder sb = new StringBuilder();
            
            sb.append("Datum");
-           sb.append("\r");
+           sb.append(";");
            sb.append("Buchungsnummer");
-           sb.append("\r");
+           sb.append(";");
            sb.append("Eingang");
-           sb.append("\r");
+           sb.append(";");
            sb.append("Ausgang");
-           sb.append("\r");
+           sb.append(";");
            sb.append("Kommentar");
            sb.append("\r\n");
            
@@ -29,8 +30,12 @@ public class CSVErsteller
            pw.close();
            
                    
-       } catch (FileNotFoundException e){
-           
+       } catch (FileNotFoundException e)
+       {
+       
        }
-   }
+           
+          
+    }
+   
 }
